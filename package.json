@@ -1,7 +1,7 @@
 {
   "name": "buildconstarction",
   "version": "0.1.0",
-  "homepage": "https://github.com/HelloFront/APM_CONST.github.io/",
+  "homepage": "https://hellofront.github.io/APM_CONST.github.io/",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
