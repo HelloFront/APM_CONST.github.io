@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/HelloFront/APM_CONST.github.io/static/css/main.2f80a4dd.css",
+    "main.js": "/HelloFront/APM_CONST.github.io/static/js/main.7da91544.js",
+    "static/media/pexels-max-rahubovskiy-6489127-min.jpg": "/HelloFront/APM_CONST.github.io/static/media/pexels-max-rahubovskiy-6489127-min.56fe26b1d7b9c37c834a.jpg",
+    "static/media/house_roof.jpeg": "/HelloFront/APM_CONST.github.io/static/media/house_roof.f9ccbbe72665134ac620.jpeg",
+    "static/media/main_bg_image.png": "/HelloFront/APM_CONST.github.io/static/media/main_bg_image.edcda9744455a4a7a438.png",
+    "static/media/kitchen_backsplash.jpeg": "/HelloFront/APM_CONST.github.io/static/media/kitchen_backsplash.300891f4a7c9cd4c38a8.jpeg",
+    "static/media/firePlace.jpeg": "/HelloFront/APM_CONST.github.io/static/media/firePlace.02a448c792fa13063c23.jpeg",
+    "static/media/bg_form.jpeg": "/HelloFront/APM_CONST.github.io/static/media/bg_form.03889004a2e7373cfb59.jpeg",
+    "static/media/custom_tile_work.jpeg": "/HelloFront/APM_CONST.github.io/static/media/custom_tile_work.ff95cc5ac0399f9529d3.jpeg",
+    "static/media/tile_floor.jpeg": "/HelloFront/APM_CONST.github.io/static/media/tile_floor.ed0c97a0ae5b72d159d5.jpeg",
+    "static/media/showers.jpeg": "/HelloFront/APM_CONST.github.io/static/media/showers.9a0875c706e5969029ae.jpeg",
+    "index.html": "/HelloFront/APM_CONST.github.io/index.html",
+    "main.2f80a4dd.css.map": "/HelloFront/APM_CONST.github.io/static/css/main.2f80a4dd.css.map",
+    "main.7da91544.js.map": "/HelloFront/APM_CONST.github.io/static/js/main.7da91544.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2f80a4dd.css",
+    "static/js/main.7da91544.js"
+  ]
+}
