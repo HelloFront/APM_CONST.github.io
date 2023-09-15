@@ -1,0 +1,37 @@
+.companyLogoContainer {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  cursor: pointer;
+}
+.companyNameContainer * {
+  margin: 0;
+  padding: 0;
+}
+.companyNameInnerContainer {
+  display: flex;
+  align-items: center;
+}
+.companyNameSvgContainer {
+  display: flex;
+  align-items: center;
+}
+.companyTopName {
+  color: #cfcfd0;
+  line-height: 18px;
+}
+.companySecondaryName {
+  color: #cfcfd0;
+}
+.companySloganName {
+  font-size: 8px;
+  text-transform: uppercase;
+  color: #b2b2b2;
+}
+.companyNameVerticalLine{
+  height: 44px;
+  width: 2px;
+  background-color: #fea62b;
+  margin: 0 6px;
+  border-radius: 4px;
+}

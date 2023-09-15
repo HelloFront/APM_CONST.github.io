@@ -1,0 +1,84 @@
+.mainHomeBlock {
+  background-image: url(../../../../assets/images/pexels-max-rahubovskiy-6489127-min.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.innerBlock {
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+}
+.mainTextContainer {
+  margin: 20px 0;
+  background-color: #ffffff32;
+  display: flex;
+  justify-content: center;
+}
+.mainText {
+  text-align: center;
+  width: 70%;
+  font-size: 50px;
+  color: #1e1f22;
+  font-weight: 700;
+}
+.mainText:hover {
+  color: #000000;
+  transition: 2s;
+  cursor: pointer
+}
+.buttonLinkContact {
+  background-color: #FFA62B;
+}
+.buttonLinkProject {
+  background-color: #3d424a;
+}
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  padding: 10px;
+}
+.linkText {
+  margin-right: 20px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.buttonLinkProject .linkText {
+  color: #ffffff;
+}
+.button {
+  margin: 0 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  width: 150px;
+}
+.arrowRight {
+  transition: all 0.4s ease-in-out;
+}
+
+.buttonLinkContact:hover .arrowRight{
+  transform: translateX(4px);
+}
+.buttonLinkProject:hover  .arrowRight{
+  transform: translateX(4px);
+
+}
+
+@media all and (max-width: 480px) {
+  .mainText {
+    text-align: center;
+    width: 70%;
+    font-size: 40px;
+    color: #1e1f22;
+    font-weight: 700;
+  }
+}

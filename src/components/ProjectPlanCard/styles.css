@@ -1,0 +1,67 @@
+.projectPlanContainer {
+  padding: 0 0 20px;
+  width: 24%;
+  border: 1px solid #ececec;
+  border-radius: 2px;
+  transition: all .2s linear;
+  margin-left: calc(4% / 8);
+  margin-right: calc(4% / 8);
+  background-color: #fafafa;
+}
+.projectPlanContainer:hover {
+  border: 1px solid #c7c7c7;
+  cursor: pointer;
+  box-shadow: 0px 2px 9px 3px #dedede;
+  transform: scale(1.005, 1.005);
+}
+.projectPlanImage {
+  width: 100%;
+  border-radius: 2px 2px 0 0;
+  border-bottom: 1px solid gray;
+}
+.planButtonBlock {
+  padding: 0 15px;
+  display: flex;
+  transition: all .2s linear;
+}
+.projectPlanName {
+  padding: 0 30px;
+  margin: 10px 0;
+}
+.projectPlanButton {
+  padding: 10px 0;
+  width: 100%;
+  background-color: #ffa72bbe;
+  border-radius: 2px;
+  transition: all .2s linear;
+  color: #40454c;
+}
+.projectPlanButton:hover {
+  background-color: #ffa72b;
+}
+.planButtonBlock:hover.planButtonBlock {
+  padding: 0 13px;
+}
+.projectPlanBottomContainer {
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media all and (max-width:480px) {
+  .projectPlanContainer {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .projectPlanImage {
+    width: 100%;
+    border-radius: 2px 2px 0 0;
+    border-bottom: 3px solid #40454c;
+  }
+  .projectPlanName {
+    padding: 0 15px;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+}

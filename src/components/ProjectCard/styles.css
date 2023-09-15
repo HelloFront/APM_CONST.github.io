@@ -1,0 +1,37 @@
+.projectCardContainer {
+  padding: 20px;
+  width: 32%;
+  border: 1px solid #ececec;
+  border-radius: 2px;
+  transition: all .2s linear;
+  margin-left: calc(4% / 6);
+  margin-right: calc(4% / 6);
+}
+.projectCardContainer:hover {
+  border: 1px solid #c7c7c7;
+  cursor: pointer;
+  box-shadow: 0px 2px 9px 3px #dedede;
+  transform: scale(1.005, 1.005);
+}
+.projectCardImage {
+  width: 100%;
+  border-radius: 2px;
+}
+.projectButtonBlock {
+  display: flex;
+  justify-content: center;
+}
+.projectCardName {
+  margin: 10px 0 30px;
+}
+.projectCardButton {
+  padding: 10px 0;
+  width: 100%;
+  background-color: #3d424a;
+  border-radius: 2px;
+  transition: all .2s linear;
+  color: #ffffff;
+}
+.projectCardButton:hover {
+  background-color: #3d424ae3;
+}

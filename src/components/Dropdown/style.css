@@ -1,0 +1,17 @@
+.dropdownSubMenu {
+  position: absolute;
+  top: 79px;
+  list-style: none;
+  background-color: #3d424af5;
+  padding: 5px 20px;
+  z-index: 1000;
+  border-top: 1px solid rgba(0, 0, 0, 0.531);
+}
+.dropdownMenuItem li {
+  background-color: #e7e7e7;
+}
+
+.dropdownMenuItem a {
+  color: #e7e7e7;
+  text-transform: uppercase;
+}

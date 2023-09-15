@@ -1,0 +1,132 @@
+.navBarContainer {
+  padding: 0 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.531);
+  background-color: #3d424a;
+  overflow: hidden;
+  box-shadow: 0 6px 9px 0px #0000004a;
+  height: 80px;
+}
+.navBarLogo {
+  width: 200px;
+}
+.navBarLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 80px;
+}
+.navBarLink {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  margin-left: 40px;
+  transition: all .2s linear;
+  color: #ffffffb3;
+  height: 100%;
+}
+.navBarLink:hover {
+  color: #000000;
+  text-decoration: none;
+}
+.active {
+  color: black;
+  padding: 0 10px;
+  transform: translateY(-30px) rotate(-20deg);
+  text-decoration: none;
+  height: 140px;
+  background-color: #FFA62B;
+}
+.navBarLinkText {
+  margin: 0;
+}
+.active .navBarLinkText {
+  display: block;
+  color: #000000;
+  transform: rotate(20deg);
+}
+.servicesBarLinkText {
+  margin: 0;
+  color: #000000;
+}
+.sideBarSubMenuItems {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.2s all ease-out;
+}
+.sideBarSubMenu {
+  width: 16rem;
+  background-color: #3d424a;
+  height: 90vh;
+  position: absolute;
+  top: 0;
+  right: -100%;
+  transition: 0.3s all ease-in-out;
+}
+
+.sideBarSubMenu.sideBarSubMenuActive {
+  right: 0;
+}
+.sidebar {
+  width: 16rem;
+  background-color: #3d424a;
+  height: 90vh;
+  position: absolute;
+  top: 10vh;
+  right: -100%;
+  transition: 0.3s all ease-in-out;
+}
+
+.sidebar.sideBarActive {
+  right: 0;
+}
+
+.sidebar-items {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.2s all ease-out;
+}
+
+.sidebar-item {
+  list-style: none;
+  margin-top: 1rem;
+  width: 100%;
+  height: 3rem;
+}
+
+.sidebar-item a {
+  margin: 0 5px;
+  text-decoration: none;
+  color: rgb(231, 231, 231);
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  cursor: pointer;
+  transition: 0.2s all ease-out;
+  border-bottom: #a2a2a3f5 1px solid;
+}
+
+.sidebar-item a span {
+  margin-left: 1.5rem;
+  font-size: 1.4rem;
+}
+
+@media all and (max-width: 480px) {
+  .navBarContainer {
+    padding: 0 30px;
+  }
+}
+
+@media all and (max-width: 360px) {
+  .navBarContainer {
+    padding: 0 20px;
+  }
+}

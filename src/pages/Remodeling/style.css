@@ -1,0 +1,117 @@
+.remodelingMainContainer {
+  background-color: #6c757d;
+  padding: 30px 100px;
+}
+
+.remodelingMainTitle {
+  color: #272727;
+  text-transform: uppercase;
+  font-size: 44px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.remodelingMainSubText {
+  display: block;
+  width: 60%;
+  color: rgb(239, 239, 239);
+  font-size: 18px;
+}
+
+.leftSideMainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 80px;
+}
+
+.leftSideItem {
+  width: 100%;
+  background-color: #848c93;
+  padding: 16px 20px 10px;
+  margin: 15px 0;
+}
+
+.leftSideItemTitle {
+  display: inline-block;
+  padding: 4px 20px;
+  background-color: #fea62bd4;
+  border-radius: 1px;
+  text-decoration: underline;
+}
+
+.leftSideItemDescription {
+  color: #f2f2f2;
+}
+
+.leftSideTextContainer {
+  width: 86%;
+}
+
+.estimateButtonContainer {
+  margin: 30px 0;
+  display: flex;
+  justify-content: flex-end;
+}
+.getEstimateButton {
+  padding: 10px 0;
+  width: 30%;
+  background-color: #ffa72b;
+  border-radius: 2px;
+  transition: all .2s linear;
+  color: #40454c;
+  border: 1px solid;
+}
+.getEstimateButton:hover {
+  transform: translateX(6px);
+}
+
+@media all and (max-width:800px) {
+  .remodelingMainSubText {
+    width: 70%;
+  }
+}
+
+@media all and (max-width:480px) {
+  .remodelingMainContainer {
+    padding: 20px;
+  }
+  .remodelingMainSubText {
+    width: 100%;
+  }
+  .leftSideTextContainer {
+    width: 100%;
+  }
+  .getEstimateButton {
+    width: 100%;
+  }
+}
+
+@media all and (max-width:360px) {
+  .remodelingMainContainer {
+    padding: 15px;
+  }
+  .remodelingMainTitle {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+  .remodelingMainSubText {
+    width: 100%;
+    font-size: 16px;
+  }
+  .leftSideMainContainer {
+    margin-top: 30px;
+  }
+  .leftSideTextContainer {
+    width: 100%;
+  }
+  .getEstimateButton {
+    width: 100%;
+  }
+  .leftSideItem {
+    width: 100%;
+    background-color: #848c93;
+    padding: 16px 10px 10px;
+    margin: 15px 0;
+  }
+}

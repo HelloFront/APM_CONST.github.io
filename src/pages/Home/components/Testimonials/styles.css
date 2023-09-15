@@ -1,0 +1,19 @@
+.testimonialsContainer {
+  padding: 60px 30px;
+  border-top: 1px solid rgb(235, 235, 235);
+  border-bottom: 1px solid rgb(235, 235, 235);
+}
+.testimonialsTitle {
+  text-align: center;
+  color: #000;
+  font-size: 50px;
+}
+.testimonialsSubText {
+  text-align: center;
+  color: rgb(166, 166, 166);
+}
+.testimonialsItemsContainer {
+  margin: 40px 0;
+  display: flex;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,49 @@
+.header {
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+.headerContainer {
+  height: 42px;
+  padding: 0 80px;
+  background-color: #363b42;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.socialButton {
+  margin-left: 10px;
+  padding: 2px 8px 4px 8px;
+  background-color: #8b8b8b;
+  border: 1px solid rgba(255, 166, 0, 0);
+  border-radius: 1px;
+  transition: all .2s linear;
+}
+.socialButton:hover {
+  padding: 2px 8px 4px 8px;
+  background-color: #343638;
+  border: 1px solid rgba(255, 255, 255, 0.509);
+  border-radius: 1px;
+}
+.rightSide {
+  display: flex;
+  align-items: center;
+}
+.emailSection {
+  display: flex;
+  color: #FFA62B;
+}
+.email {
+  display: block;
+  margin: 0 40px 0 10px;
+  color: #FFFFFF;
+}
+.placeholderBlock {
+  height: 80px;
+}
+
+@media all and (max-width: 480px) {
+  .socialButton {
+    margin: 0 2px;
+  }
+}

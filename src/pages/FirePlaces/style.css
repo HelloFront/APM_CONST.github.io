@@ -1,0 +1,39 @@
+.firePlacesPageBackground {
+  background-color: #6c757d;
+  height: 100%;
+  padding: 70px 100px;
+}
+.firePlacesTitle {
+  color: #ffffff;
+  padding: 0 0 20px;
+}
+.firePlacesText {
+  line-height: 30px;
+  color: #ffffff;
+  padding: 20px 50px 0 0;
+}
+.firePlacesImage {
+  max-width: 100%;
+  background-image: url(../../assets/images/firePlace.jpeg);
+  background-size: cover;
+  background-position: center;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+.firePlacesImage:hover {
+  transform: scale(1.07, 1.03);
+  background-image: url(../../assets/images/firePlace.jpeg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 2px;
+}
+.firePlacesInfoContainer {
+  height: 500px;
+  display: flex;
+}
+.firePlacesRightSide{
+  background-color: #3d424ad0;
+  height: 100%;
+  width: 100%;
+  padding: 20px 60px;
+}

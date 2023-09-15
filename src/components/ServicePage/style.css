@@ -1,0 +1,107 @@
+.servicePageBackground {
+  background-color: #6c757d;
+  padding: 70px 100px;
+}
+.servicePageTitle {
+  color: #ffffff;
+  padding: 0 0 20px;
+}
+.servicePageText {
+  display: block;
+  width: 80%;
+  line-height: 30px;
+  color: #ffffff;
+  padding: 20px 50px 0 0;
+}
+.servicePageImageContainer {
+  width: 30%;
+}
+.servicePageImage {
+  max-width: 100%;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+.servicePageImage:hover {
+  transform: scale(1.07, 1.03);
+  background-size: cover;
+  background-position: center;
+  border-radius: 2px;
+}
+.servicePageInfoContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.servicePageRightSide{
+  background-color: #3d424ad0;
+  width: 70%;
+  padding: 20px 60px;
+}
+.estimateButtonContainer {
+  margin: 30px 0;
+  display: flex;
+  justify-content: flex-end;
+}
+.estimateButton {
+  padding: 10px 0;
+  width: 30%;
+  background-color: #ffa72b;
+  border-radius: 2px;
+  transition: all .2s linear;
+  color: #40454c;
+  border: 1px solid;
+}
+.estimateButton:hover {
+  transform: translateX(6px);
+}
+
+@media all and (max-width:480px) {
+  .servicePageBackground {
+    background-color: #6c757d;
+    padding: 40px 20px;
+  }
+  .servicePageInfoContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .servicePageImageContainer {
+    width: 100%;
+  }
+  .servicePageRightSide{
+    width: 100%;
+    padding: 20px;
+  }
+  .servicePageText {
+    width: 100%;
+  } 
+  .estimateButton {
+    width: 1000%;
+  }
+}
+
+@media all and (max-width:360px) {
+  .servicePageBackground {
+    background-color: #6c757d;
+    padding: 30px 15px;
+  }
+  .servicePageInfoContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .servicePageRightSide{
+    padding: 10px;
+  }
+  .servicePageText {
+    width: 100%;
+    padding: 20px 0 0 0;
+    font-size: 14px;
+    line-height: 20px;
+  } 
+  .estimateButton {
+    width: 1000%;
+  }
+  .servicePageTitle {
+    font-size: 26px;
+    padding: 0;
+  }
+}
