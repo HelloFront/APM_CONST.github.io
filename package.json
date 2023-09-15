@@ -1,6 +1,7 @@
 {
   "name": "buildconstarction",
   "version": "0.1.0",
+  "homepage": "https://github.com/HelloFront/APM_CONST.github.io/",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
@@ -33,6 +34,7 @@
     "ajv": "^6.9.1",
     "cross-env": "^5.2.0",
     "eslint": "^8.19.0",
+    "gh-pages": "^6.0.0",
     "nan": "^2.14.1",
     "prettier": "^2.7.1",
     "react-scripts": "^5.0.0",
@@ -45,7 +47,9 @@
     "start": "rimraf ./build && react-scripts start",
     "build": "react-scripts build",
     "test": "cross-env CI=true react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": {
     "production": [
