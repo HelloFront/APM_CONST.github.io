@@ -46,7 +46,7 @@ export const SERVICES_DROPDOWN = [
 
 export const PAGES = [
   {
-    path: "/home",
+    path: "/home/",
     component: Home,
     name: "Home",
     sName: "sidebar-item",

@@ -1,6 +1,6 @@
 export const APP_PAGES = {
   HOME: {
-    path: "/home",
+    path: "/home/",
     name: "Home",
   },
   PORTFOLIO: {
