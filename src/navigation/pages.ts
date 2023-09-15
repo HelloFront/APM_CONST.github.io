@@ -46,7 +46,7 @@ export const SERVICES_DROPDOWN = [
 
 export const PAGES = [
   {
-    path: "/home/",
+    path: "/APM_CONST.github.io/",
     component: Home,
     name: "Home",
     sName: "sidebar-item",
