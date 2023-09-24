@@ -1,6 +1,8 @@
 .projectCardContainer {
+  margin-top: 10px;
   padding: 20px;
-  width: 32%;
+  flex: 1;
+  min-height: 300px;
   border: 1px solid #ececec;
   border-radius: 2px;
   transition: all .2s linear;
@@ -15,6 +17,7 @@
 }
 .projectCardImage {
   width: 100%;
+  height: auto;
   border-radius: 2px;
 }
 .projectButtonBlock {
@@ -22,6 +25,8 @@
   justify-content: center;
 }
 .projectCardName {
+  border-top: 1px solid #adb2b9;
+  padding-top: 6px;
   margin: 10px 0 30px;
 }
 .projectCardButton {
@@ -34,4 +39,10 @@
 }
 .projectCardButton:hover {
   background-color: #3d424ae3;
+}
+
+@media all and (max-width: 700px) {
+  .projectCardContainer {
+    flex: 1 0 360px;
+  }
 }

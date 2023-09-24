@@ -1,10 +1,15 @@
-import React from 'react';
-import Navigation from './navigation/index';
+import React from "react";
 
-import './custom.css';
+import Navigation from "./navigation/index";
+import { FirebaseContextProvider } from "./context";
+import "./custom.css";
 
 const App = () => {
-  return <Navigation />;
+  return (
+    <FirebaseContextProvider>
+      <Navigation />
+    </FirebaseContextProvider>
+  );
 };
 
 export default App;

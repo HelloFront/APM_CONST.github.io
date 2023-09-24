@@ -18,9 +18,9 @@ const Home = () => {
     <div>
       <GreetingBlock />
       <OurNewPlans />
-      {/* <OurLastProjects /> */}
+      <OurLastProjects />
       <BannerShowProjects />
-      {/* <Testimonials /> */}
+      <Testimonials />
       <ContactForm isContactWithUsVisible={false} />
     </div>
   );

@@ -15,5 +15,13 @@
 .testimonialsItemsContainer {
   margin: 40px 0;
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: wrap;
+  justify-content: center;
+}
+
+.testimonialsItemsContainer::after {
+  content: "";
+  width: 340px;
+  justify-content: center;
+
 }

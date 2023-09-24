@@ -8,17 +8,13 @@ interface IProps {
 }
 
 const ProjectCard = ({ card }: IProps) => {
-  const { imageSourse, name } = card;
+  const { img, title } = card;
 
   return (
     <div className="projectCardContainer">
-      <img
-        className="projectCardImage"
-        src={imageSourse}
-        alt="projectCardImage"
-      />
-      <p className="projectCardName">{name}</p>
+      <img className="projectCardImage" src={img} alt="projectCardImage" />
 
+      <p className="projectCardName">{title}</p>
       <div className="projectButtonBlock">
         <button className="projectCardButton">More details</button>
       </div>

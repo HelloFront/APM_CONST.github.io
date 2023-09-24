@@ -18,3 +18,9 @@
   flex-direction: row;
   flex-wrap: wrap;
 }
+
+@media all and (max-width:480px) {
+  .ourLastProjectsContainer {
+    padding: 100px 10px;
+  }
+}

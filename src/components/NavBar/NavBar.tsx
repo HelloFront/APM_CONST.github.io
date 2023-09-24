@@ -15,7 +15,11 @@ const NavBar = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [sideBar, setSideBar] = useState(false);
 
-  const goBackToMainPage = () => navigate(PAGES[0].path);
+  const goBackToMainPage = () => {
+    setDropdown(false);
+    setSideBar(false);
+    navigate(PAGES[0].path);
+  };
 
   const isActiveTab = (pathName: string) => {
     return SERVICES_DROPDOWN.some(item => {
@@ -45,10 +49,10 @@ const NavBar = () => {
   }, [pathname]);
 
   useEffect(() => {
-    handleResize()
-    window.scrollTo(0, 0)
+    handleResize();
+    window.scrollTo(0, 0);
   }, []);
-  
+
   const isTouchScreenDevice = () => {
     try {
       document.createEvent("TouchEvent");
@@ -57,7 +61,6 @@ const NavBar = () => {
       return false;
     }
   };
-
 
   return (
     <div className="navBarContainer">
@@ -68,27 +71,25 @@ const NavBar = () => {
           {PAGES.map(page => {
             if (page.name === "Services") {
               return (
-                <>
-                  <Link
-                    key={v4()}
-                    to={!isTouchScreenDevice && SERVICES_DROPDOWN[0].path}
-                    onMouseEnter={() => setDropdown(true)}
-                    onMouseLeave={() => setDropdown(false)}
-                    onClick={() =>
-                      isTouchScreenDevice ? setDropdown(true) : null
-                    }
+                <Link
+                  key={v4()}
+                  to={!isTouchScreenDevice && SERVICES_DROPDOWN[0].path}
+                  onMouseEnter={() => setDropdown(true)}
+                  onMouseLeave={() => setDropdown(false)}
+                  onClick={() =>
+                    isTouchScreenDevice ? setDropdown(true) : null
+                  }
+                >
+                  <div
+                    className={`navBarLink ${
+                      isActiveTab(pathname) && "active"
+                    }`}
                   >
-                    <div
-                      className={`navBarLink ${
-                        isActiveTab(pathname) && "active"
-                      }`}
-                    >
-                      <p className="navBarLinkText">{page.name}</p>
-                    </div>
+                    <p className="navBarLinkText">{page.name}</p>
+                  </div>
 
-                    {dropdown && <DropDown />}
-                  </Link>
-                </>
+                  {dropdown && <DropDown />}
+                </Link>
               );
             } else {
               return (
@@ -134,7 +135,6 @@ const NavBar = () => {
               return (
                 <li key={v4()} className={item.sName} onClick={() => null}>
                   <Link
-                    key={v4()}
                     to={!isTouchScreenDevice && SERVICES_DROPDOWN[0].path}
                     onClick={() => setDropdown(!dropdown)}
                   >

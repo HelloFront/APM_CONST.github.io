@@ -16,7 +16,7 @@ const GreetingBlock = () => {
         <div className="buttons">
           <button className="buttonLinkContact button">
             <Link className="link" key={v4()} to={APP_PAGES.CONTACTS.path}>
-              <div className="linkText">Contacts</div>
+              <div className="linkText">Free estimate</div>
               <ArrowNarrowRight className="arrowRight" size={16} />
             </Link>
           </button>

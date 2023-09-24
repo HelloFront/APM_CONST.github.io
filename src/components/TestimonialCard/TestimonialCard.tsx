@@ -16,6 +16,7 @@ const TestimonialCard = ({ testimonial }: IProps) => {
       <div className="testimonialsInnerContainer">
         <div className="testimonialsIconContainer">
           <Quote color="rgb(103, 103, 103)" size={40} />
+
         </div>
 
         <div className="testimonialsInfoContainer">

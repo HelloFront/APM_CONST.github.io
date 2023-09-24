@@ -1,50 +1,50 @@
 import { IProject, IService } from "../types/project";
 import { ITestimonial } from "../types/testimonial";
 
-export const MOCK_DATA_LAST_PROJECTS: IProject[] = [
-  {
-    id: 1,
-    name: "Classic Court",
-    imageSourse: require("../assets/images/main_bg_image.png"),
-  },
-  {
-    id: 2,
-    name: "Will Rose Lane",
-    imageSourse: require("../assets/images/main_bg_image.png"),
-  },
-  {
-    id: 3,
-    name: "Shannon Run Road",
-    imageSourse: require("../assets/images/main_bg_image.png"),
-  },
-];
+// export const MOCK_DATA_LAST_PROJECTS: IProject[] = [
+//   {
+//     id: 1,
+//     name: "Classic Court",
+//     imageSourse: require("../assets/images/main_bg_image.png"),
+//   },
+//   {
+//     id: 2,
+//     name: "Will Rose Lane",
+//     imageSourse: require("../assets/images/main_bg_image.png"),
+//   },
+//   {
+//     id: 3,
+//     name: "Shannon Run Road",
+//     imageSourse: require("../assets/images/main_bg_image.png"),
+//   },
+// ];
 
-export const MOCK_DATA_NEW_PLANS: IService[] = [
-  {
-    id: 1,
-    name: "Tile floors",
-    imageSourse: require("../assets/images/tile_floor.jpeg"),
-    path: "/tile_floors",
-  },
-  {
-    id: 2,
-    name: "Kitchen backsplashes",
-    imageSourse: require("../assets/images/kitchen_backsplash.jpeg"),
-    path: "/kitchen_backsplashes",
-  },
-  {
-    id: 3,
-    name: "Custom tile work",
-    imageSourse: require("../assets/images/custom_tile_work.jpeg"),
-    path: "/custom_tile_work",
-  },
-  {
-    id: 4,
-    name: "SHOWERS",
-    imageSourse: require("../assets/images/showers.jpeg"),
-    path: "/showers",
-  },
-];
+// export const MOCK_DATA_NEW_PLANS: IService[] = [
+//   {
+//     id: 1,
+//     title: "Tile floors",
+//     img: require("../assets/images/tile_floor.jpeg"),
+//     path: "/tile_floors",
+//   },
+//   {
+//     id: 2,
+//     title: "Kitchen backsplashes",
+//     img: require("../assets/images/kitchen_backsplash.jpeg"),
+//     path: "/kitchen_backsplashes",
+//   },
+//   {
+//     id: 3,
+//     title: "Custom tile work",
+//     img: require("../assets/images/custom_tile_work.jpeg"),
+//     path: "/custom_tile_work",
+//   },
+//   {
+//     id: 4,
+//     title: "SHOWERS",
+//     img: require("../assets/images/showers.jpeg"),
+//     path: "/showers",
+//   },
+// ];
 
 export const MOCK_DATA_TESTIMONIALS: ITestimonial[] = [
   {

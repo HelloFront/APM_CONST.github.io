@@ -2,7 +2,7 @@
   "include": ["src", "./src/**/*.ts", "./src/**/*.svg", "src/pages/KitchenBacksplashes/KitchenBacksplashes.tsx"],
   "compilerOptions": {
       "target": "es5",
-      "jsx": "react",
+      "jsx": "react-jsx",
       "allowSyntheticDefaultImports": true,
       "typeRoots" : ["node_modules/@types", "src/types"]
   }

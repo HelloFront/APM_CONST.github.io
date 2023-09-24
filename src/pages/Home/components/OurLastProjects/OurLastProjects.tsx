@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { v4 } from "uuid";
 
 import { ProjectCard } from "../../../../components";
-import { MOCK_DATA_LAST_PROJECTS } from "../../../../constants/mock";
+import { FirebaseContext } from "../../../../context";
 import "./styles.css";
 
 const OurLastProjects = () => {
+  const { projects } = useContext(FirebaseContext);
+
+  const slicedData = projects.slice(0, 3);
   return (
     <div className="ourLastProjectsContainer">
       <div className="ourLastProjectsInfoContainer">
@@ -16,7 +19,7 @@ const OurLastProjects = () => {
       </div>
 
       <div className="ourLastProjectCardContainer">
-        {MOCK_DATA_LAST_PROJECTS.map(card => (
+        {slicedData.map((card: any) => (
           <ProjectCard key={v4()} card={card} />
         ))}
       </div>

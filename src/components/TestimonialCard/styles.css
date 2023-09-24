@@ -1,6 +1,5 @@
 .testimonialCardContainer {
-  width: 32%;
-  
+  flex: 1 0 360px;
   padding: 12px 0;
   position: relative;
   margin: 10px calc(4% / 6);
