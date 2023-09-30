@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { v4 } from "uuid";
 import { X, Menu2 } from "tabler-icons-react";
@@ -14,6 +14,13 @@ const NavBar = () => {
   const [dropdown, setDropdown] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [sideBar, setSideBar] = useState(false);
+
+  const getSlideBarIconColor = (itemPathname: string) =>
+    pathname === itemPathname ? "#FFA62B" : "#FFFFFF";
+
+  const ARRAY_SERVICES_DROPDOWN_PATHNAME = SERVICES_DROPDOWN.map(
+    item => item.path,
+  );
 
   const goBackToMainPage = () => {
     setDropdown(false);
@@ -138,7 +145,20 @@ const NavBar = () => {
                     to={!isTouchScreenDevice && SERVICES_DROPDOWN[0].path}
                     onClick={() => setDropdown(!dropdown)}
                   >
-                    <span>{item.name}</span>
+                    <div className="sideBarItemContainer">
+                      <p className="sideBarItemContainerTitle">{item.name}</p>
+                      <div>
+                        <item.icon
+                          color={
+                            ARRAY_SERVICES_DROPDOWN_PATHNAME.includes(pathname)
+                              ? "#FFA62B"
+                              : "#FFFFFF"
+                          }
+                          strokeWidth={1}
+                          size={38}
+                        />
+                      </div>
+                    </div>
                   </Link>
                 </li>
               );
@@ -150,7 +170,16 @@ const NavBar = () => {
                   onClick={() => setSideBar(!sideBar)}
                 >
                   <Link to={item.path}>
-                    <span>{item.name}</span>
+                    <div className="sideBarItemContainer">
+                      <p className="sideBarItemContainerTitle">{item.name}</p>
+                      <div>
+                        <item.icon
+                          color={getSlideBarIconColor(item.path)}
+                          strokeWidth={1}
+                          size={38}
+                        />
+                      </div>
+                    </div>
                   </Link>
                 </li>
               );
@@ -167,7 +196,9 @@ const NavBar = () => {
             {SERVICES_DROPDOWN.map(item => {
               return (
                 <li className="sidebar-item" key={v4()}>
-                  <Link to={item.path}>{item.name}</Link>
+                  <Link to={item.path}>
+                    <p className="dropDownItemContainerTitle">{item.name}</p>
+                  </Link>
                 </li>
               );
             })}

@@ -35,11 +35,9 @@ focus.errorInput, input:focus.errorInput {
 .errorInput {
   outline: 1px solid red;
 }
-.custom_input_subject {
-    width: 100%;
-}
 .basicInput {
-  margin: 10px 0;
+  width: 100%;
+  margin: 10px 4px;
 }
 .errorLabel {
   color: red;
@@ -66,6 +64,10 @@ focus.errorInput, input:focus.errorInput {
 form {
   border-radius: 2px;
 }
+.formTopInputsContainer {
+  display: flex;
+  justify-content: space-between;
+}
 .buttonContainer {
   display: flex;
   justify-content: flex-end;
@@ -83,9 +85,32 @@ form {
 .submitButton:hover {
   border: 1px solid rgb(115, 115, 115);
 }
+.submitButton:active {
+  margin-top: 20px;
+  padding: 6px;
+  width: 30%;
+  background-color: #FFA62B;
+  border-radius: 2px;
+  transition: all .4s linear;
+  border: 1px solid rgba(128, 128, 128, 0);
+  cursor: pointer;
+}
+
+.submitButtonActive {
+  margin-top: 20px;
+  padding: 6px;
+  width: 30%;
+  background-color: #FFA62B;
+  border-radius: 2px;
+  transition: all .4s linear;
+  border: 1px solid rgba(128, 128, 128, 0);
+  cursor: pointer;
+}
+
 .errorMessage {
   position: absolute;
   color: red;
+  border-radius: 1px;
 }
 .contactInformationContainer {
   display: flex;
@@ -136,6 +161,11 @@ form {
   margin: 16px 0px;
 }
 
+@media all and (max-width:780px) {
+  .formTopInputsContainer {
+    flex-direction: column;
+  }
+}
 
 @media all and (max-width:480px) {
   .buttonsContainer {
@@ -158,26 +188,12 @@ form {
   .custom_form {
     width: 90%;
   }
-  .custom_input {
-    height: 20px;
+  .custom_input_message {
+    margin-top: 20px;
     width: 100%;
-    background-color: white;
-    color: rgb(7, 7, 7);
-    padding: 14px 10px;
-    border: none;
-    border-radius: 4px;
-  }
-  .col-6 {
-    padding: 0;
-  }
-  .col-12 {
-    padding: 0;
-  }
-  label {
-    font-size: 16px;
-  }
-  .row {
-    flex-direction: column;
+    height: 120px;
+    max-height: 320px;
+    min-height: 120px;
   }
 }
 

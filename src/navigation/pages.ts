@@ -1,4 +1,10 @@
 import {
+  ArticleIcon,
+  BookmarksIcon,
+  HomeIcon,
+  PhotoIcon,
+} from "../assets/icons";
+import {
   Home,
   Gallery,
   Contact,
@@ -46,27 +52,31 @@ export const SERVICES_DROPDOWN = [
 
 export const PAGES = [
   {
-    path: "/APM_CONST.github.io/",
+    path: "/APM_CONST.github.io",
     component: Home,
     name: "Home",
+    icon: HomeIcon,
     sName: "sidebar-item",
   },
   {
     path: "/gallery",
     component: Gallery,
     name: "Gallery",
+    icon: PhotoIcon,
     sName: "sidebar-item",
   },
   {
     path: "/services",
     component: Services,
     name: "Services",
+    icon: ArticleIcon,
     sName: "sidebar-item",
   },
   {
     path: "/contacts",
     component: Contact,
     name: "Free Estimate",
+    icon: BookmarksIcon,
     sName: "sidebar-item",
   },
 ];

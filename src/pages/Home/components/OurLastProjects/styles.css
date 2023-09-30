@@ -23,4 +23,8 @@
   .ourLastProjectsContainer {
     padding: 100px 10px;
   }
+  .ourLastProjectsTitle {
+    text-align: center;
+    font-size: 30px;
+  }
 }

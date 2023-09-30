@@ -1,31 +1,26 @@
-import React from "react";
+import { useState } from "react";
 import * as emailjs from "emailjs-com";
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useFormik } from "formik";
+
 import { contactValidationSchema } from "./validation";
 import CustomFormInput from "./CustomFormInput";
-import "../styles.css";
 import ContactInformation from "./ContactInformation";
+import "../styles.css";
 
-const defaultValues = {
-  from_name: "", //user name
-  subject: "", // subject of email
-  to_name: "savchik.vl1@gmail.com",
-  message: "", // message of email
-};
 
 const ContactForm = ({ isContactWithUsVisible = true }) => {
+  const [isLoading, setIsLoading] = useState(false);
+
   const formik = useFormik({
-    //we have created our initailValues object in a format EmailJS accepts
     initialValues: {
       user_name: "", //user name
-      subject: "", // subject of email
       user_email: "", // user email
       message: "", // message of email
     },
     validationSchema: contactValidationSchema,
     onSubmit: (values, { setSubmitting, resetForm }) => {
+      setIsLoading(true);
       try {
         emailjs
           .send(
@@ -36,10 +31,12 @@ const ContactForm = ({ isContactWithUsVisible = true }) => {
           )
           .then(() => {
             setSubmitting(false);
+            setIsLoading(false);
             resetForm();
           });
       } catch {
         setSubmitting(false);
+        setIsLoading(false);
       }
     },
   });
@@ -53,74 +50,63 @@ const ContactForm = ({ isContactWithUsVisible = true }) => {
       <ContactInformation />
 
       <form className="custom_form p-5" onSubmit={formik.handleSubmit}>
-        <div className="row">
-          <div className="col-6">
-            <CustomFormInput
-              name="user_name"
-              type="text"
-              title="Your Name"
-              className="custom_input"
-              placeholder="Enter your name..."
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.user_name}
-              error={formik.errors.user_name}
-              touched={formik.touched.user_name}
-              required
-            />
-          </div>
+        <div className="formTopInputsContainer">
+          <CustomFormInput
+            name="user_name"
+            type="text"
+            title="Your Name"
+            className="custom_input"
+            placeholder="Enter your name..."
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.user_name}
+            error={formik.errors.user_name}
+            touched={formik.touched.user_name}
+            required
+          />
 
-          <div className="col-6">
-            <CustomFormInput
-              name="user_email"
-              type="user_email"
-              title="Your Email"
-              className="custom_input"
-              placeholder="Enter your email..."
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.user_email}
-              error={formik.errors.user_email}
-              touched={formik.touched.user_email}
-              required
-            />
-          </div>
+          <CustomFormInput
+            name="user_email"
+            type="user_email"
+            title="Your Email"
+            className="custom_input"
+            placeholder="Enter your email..."
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.user_email}
+            error={formik.errors.user_email}
+            touched={formik.touched.user_email}
+            required
+          />
         </div>
-        <div className="row mt-4">
-          <div className="col-12">
-            <CustomFormInput
-              name="subject"
-              type="text"
-              title="Subject"
-              className="custom_input custom_input_subject"
-              placeholder="Enter subject..."
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.subject}
-              error={formik.errors.subject}
-              touched={formik.touched.subject}
-              required
-            />
-          </div>
-        </div>
-        <div className="row mt-4">
-          <div className="col-12">
-            <textarea
-              name="message"
-              className="custom_input custom_input_message"
-              placeholder="Message.."
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.message}
-            />
-            {formik.errors.message && formik.touched.message && (
-              <p className="errorMessage">{formik.errors.message}</p>
-            )}
-          </div>
-        </div>
+        {/* <CustomFormInput
+          name="subject"
+          type="text"
+          title="Subject"
+          className="custom_input"
+          placeholder="Enter subject..."
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          value={formik.values.subject}
+          error={formik.errors.subject}
+          touched={formik.touched.subject}
+          required
+        /> */}
+        <textarea
+          name="message"
+          className="custom_input custom_input_message"
+          placeholder="Message.."
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          value={formik.values.message}
+        />
+        {formik.errors.message && formik.touched.message && (
+          <p className="errorMessage">{formik.errors.message}</p>
+        )}
+
         <div className="buttonContainer">
           <button
-            className="submitButton"
+            className={isLoading ? "submitButtonActive" : "submitButton"}
             type="submit"
             disabled={formik.dirty && formik.isSubmitting}
           >
