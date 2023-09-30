@@ -16,19 +16,23 @@ const NavBar = () => {
   const [sideBar, setSideBar] = useState(false);
 
   const getSlideBarIconColor = (itemPathname: string) =>
-    pathname === itemPathname ? "#FFA62B" : "#FFFFFF";
+    pathname === itemPathname || pathname === itemPathname.slice(0, -1)
+      ? "#FFA62B"
+      : "#FFFFFF";
 
-  const ARRAY_SERVICES_DROPDOWN_PATHNAME = SERVICES_DROPDOWN.map(
-    item => item.path,
-  );
+  const ARRAY_SERVICES_DROPDOWN_PATHNAME = useMemo(() => {
+    return SERVICES_DROPDOWN.map(item => item.path);
+  }, []);
 
   const goBackToMainPage = () => {
     setDropdown(false);
     setSideBar(false);
     navigate(PAGES[0].path);
   };
+  const isActiveNavTab = (pathName: string) =>
+    pathname === pathName || pathname === pathName.slice(0, -1);
 
-  const isActiveTab = (pathName: string) => {
+  const isServiceActiveTab = (pathName: string) => {
     return SERVICES_DROPDOWN.some(item => {
       return item.path === pathName;
     });
@@ -89,7 +93,7 @@ const NavBar = () => {
                 >
                   <div
                     className={`navBarLink ${
-                      isActiveTab(pathname) && "active"
+                      isServiceActiveTab(pathname) && "active"
                     }`}
                   >
                     <p className="navBarLinkText">{page.name}</p>
@@ -103,7 +107,7 @@ const NavBar = () => {
                 <Link key={v4()} to={page.path}>
                   <div
                     className={`navBarLink ${
-                      pathname === page.path && "active"
+                      isActiveNavTab(page.path) && "active"
                     }`}
                   >
                     <p className="navBarLinkText">{page.name}</p>

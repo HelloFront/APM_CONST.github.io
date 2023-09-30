@@ -52,7 +52,7 @@ export const SERVICES_DROPDOWN = [
 
 export const PAGES = [
   {
-    path: "/APM_CONST.github.io",
+    path: "/APM_CONST.github.io/",
     component: Home,
     name: "Home",
     icon: HomeIcon,
