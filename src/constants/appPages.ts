@@ -1,6 +1,6 @@
 export const APP_PAGES = {
   HOME: {
-    path: "/APM_CONST.github.io/",
+    path: "/",
     name: "Home",
   },
   PORTFOLIO: {

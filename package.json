@@ -1,7 +1,7 @@
 {
   "name": "apm_construction_llc",
   "version": "0.1.0",
-  "homepage": "https://hellofront.github.io/APM_CONST.github.io/",
+  "homepage": "http://savco-llc.com/",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
